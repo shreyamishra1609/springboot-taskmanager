@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "31eb9301-c699-46f0-aeac-b8eac162bce9",
+		"name": "Heroku deployed task manager api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://backend-taskmanager.herokuapp.com/api/v1/task",
+					"protocol": "https",
+					"host": [
+						"backend-taskmanager",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://backend-taskmanager.herokuapp.com/api/v1/task/1",
+					"protocol": "https",
+					"host": [
+						"backend-taskmanager",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post/create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Frontend app wireframe\",\r\n        \"type\": \"Todo\",\r\n        \"dueDate\": \"06/02/2024\",\r\n        \"description\": \"Design wireframe for screen\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend-taskmanager.herokuapp.com/api/v1/task",
+					"protocol": "https",
+					"host": [
+						"backend-taskmanager",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Frontend app document\",\r\n        \"type\": \"Completed\",\r\n        \"dueDate\": \"06/02/2024\",\r\n        \"description\": \"Design documention for screen\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend-taskmanager.herokuapp.com/api/v1/task/1",
+					"protocol": "https",
+					"host": [
+						"backend-taskmanager",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://backend-taskmanager.herokuapp.com/api/v1/task/1",
+					"protocol": "https",
+					"host": [
+						"backend-taskmanager",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
